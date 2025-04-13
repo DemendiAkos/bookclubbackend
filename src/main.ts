@@ -14,6 +14,8 @@ async function bootstrap() {
     optionsSuccessStatus: 204,
   });
 
+  app.setGlobalPrefix('api')
+
   app.useGlobalPipes(new ValidationPipe());
 
   app.useStaticAssets(join(__dirname, '..', 'public'));
